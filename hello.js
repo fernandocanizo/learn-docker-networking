@@ -10,6 +10,14 @@ const knex = require('knex')({
   connection: config.connection,
 });
 
+const init = async () => {
+  return await knex.schema.createTable('test', table => {
+    table.increments();
+    table.string('name');
+    table.timestamps(true, true);
+  });
+};
+
 const insertTest = async (name) => {
   return await knex('test')
     .insert({ name })
@@ -24,6 +32,8 @@ const doit = async (req, res) => {
     console.log(e);
   }
 }
+
+init();
 
 app.get('*', doit);
 
