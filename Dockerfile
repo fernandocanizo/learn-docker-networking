@@ -17,6 +17,4 @@ COPY config-docker.js config/config.js
 
 RUN npm ci --only=prod
 
-ENTRYPOINT ["npm", "run", "init" ]
-
 CMD [ "npm", "start" ]

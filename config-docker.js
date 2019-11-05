@@ -4,6 +4,6 @@ module.exports = {
     user: 'csw',
     password: 'example',
     port: '5432',
-    database: 'hello_docker'
+    database: 'csw'
   },
 };
