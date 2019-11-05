@@ -1,0 +1,18 @@
+version: "3.7"
+services:
+
+  db:
+    image: postgres
+    restart: always
+    ports:
+      - 54321:5432
+    environment:
+      POSTGRES_PASSWORD: example
+      POSTGRES_USER: csw
+
+  hello:
+    build: .
+    image: csw/ldn:1.0
+    restart: always
+    ports:
+      - 50000:50000
