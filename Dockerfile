@@ -10,8 +10,7 @@ RUN npm install -g npm
 
 WORKDIR /usr/local/src
 
-# copy the repository form the previous image
-COPY . /usr/local/src
+RUN git clone https://github.com/fernandocanizo/learn-docker-networking
 
 COPY config-docker.js config/config.js
 
