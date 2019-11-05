@@ -1,0 +1,17 @@
+{
+  "name": "learn-docker-networking",
+  "version": "1.0.0",
+  "description": "A simple test to learn how to connect containers in Docker",
+  "main": "hello.js",
+  "scripts": {
+    "start": "node hello.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Fernando L. Canizo <fernandocanizo@gmail.com>",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.17.1",
+    "knex": "^0.20.1",
+    "pg": "^7.12.1"
+  }
+}
